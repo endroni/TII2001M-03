@@ -13,9 +13,9 @@
         $celular1 = new Celular();
         $celular1->novoCelular('a20s','Samsumg',1000);
 
-        echo "<pre>";
-            print_r($celular1);
-        echo "</pre>";
+        foreach($celular1 as $key => $value){
+            echo $key." = ".$value."<br />";
+        }
     ?>
 </body>
 </html>
