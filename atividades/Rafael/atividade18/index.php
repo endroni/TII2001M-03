@@ -14,7 +14,7 @@
         $celular1->novoCelular('a20s','Samsumg',1000);
 
         foreach($celular1 as $key => $value){
-            echo $key." = ".$value."<br />";
+            echo $key." = ".$value."<br>";
         }
     ?>
 </body>
