@@ -54,7 +54,7 @@ class pessoa{
  
 
     public function falar(){
-        if(!$this->status) {
+        if($this->status) {
             echo "Falar dados: ";
         } else {
             echo "Escutar perguntas!";
