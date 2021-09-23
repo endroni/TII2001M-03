@@ -12,19 +12,10 @@
     <?php
         require_once 'class.php';
 
-        $class = new pessoa();
-        $class -> nome = "Jovem";
-        $class -> Idade = "22 anos";
-        $class -> altura = "1.85cm";
-        $class -> peso = "87kg";
-      
-        
-        $class->falar();
-
-    
+        $class = new pessoa("Pedro","40 anos", "185cm", "87kg", true);
    
         echo "<pre>";
-            print_r($pessoa);
+            print_r($class);
         echo "</pre>";
 
     ?>
