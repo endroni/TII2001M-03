@@ -19,7 +19,7 @@
         $class -> peso = "87kg";
       
         
-        $class->Falar();
+        $class->falar();
 
     
     
