@@ -22,7 +22,7 @@
         $class->falar();
 
     
-    
+   
         echo "<pre>";
             print_r($pessoa);
         echo "</pre>";
