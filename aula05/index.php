@@ -15,7 +15,7 @@
     <p>Lista de serviços fornecidos por um componente. É o contato com o mundo exterior, que define o que pode ser feito com um objeto dessa classe.</p>
     <p>Interface só tem métodos</p>
     <p>Exemplo Interface:</p>
-    <!-- <img src="interface.png" alt="Interface"> -->
+    <img src="interface.png" alt="Interface" width="150px">
     <p>Exemplo Classe</p>
     <img src="clasArCondicionado.png" alt="Diagrama de Classe" width="100px">
     <p>Vantagens:</p>
