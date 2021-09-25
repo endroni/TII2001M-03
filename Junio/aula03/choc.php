@@ -1,7 +1,7 @@
 <?php
 
 class A {
-    protect $id;
+    protected $id;
 
     public function _construct ($id)
 

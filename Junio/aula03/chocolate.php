@@ -3,7 +3,7 @@ class Chocolate{
     private $marca;
     private $sabor;
     private $preco;
-    private $gramas = true;
+    private $gramas = false;
 
     public function _construct($ma, $sa, $preco, $gramas){
 
