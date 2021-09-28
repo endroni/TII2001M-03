@@ -1,5 +1,12 @@
 <?php
-class clasArCondicionado{
+interface Controle{
+    public function ligar();
+    public function desligar();
+    public function aumentarTemperatura();
+    public function diminuirTemperatura();
+}
+
+class ArCondicionado implements Controle{
     private $temperatura;
     private $marca;
     private $modelo;
@@ -49,7 +56,7 @@ class clasArCondicionado{
         $this->status = $sta;
     }
 
-    public function Ligar(){
+    public function ligar(){
         if ($this->getStatus()){
             $this->setStatus(false);
             echo 'Estava ligado, agora foi desligado!';
@@ -59,7 +66,7 @@ class clasArCondicionado{
         }
     }
 
-    public function Desligar(){
+    public function desligar(){
         if($this->getStatus()) {
             $this->getStatus(false);
             echo "Desligando";            
@@ -68,14 +75,14 @@ class clasArCondicionado{
         }
     }
 
-    public function Aumentar(){
+    public function aumentarTemperatura(){
         if($this->getStatus()){
             $this->temperatura++;
             echo "Temperatura em {$this->getTemperatura()} <br>";
         }
     }
 
-    public function Diminuir(){
+    public function diminuirTemperatura(){
         if($this->getStatus()){
             $this->temperatura--;
             echo "Temperatura em {$this->getTemperatura()} <br>";

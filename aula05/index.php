@@ -28,9 +28,9 @@
     <?php
     require_once 'arCondicionado.php';
 
-    $ac1 = new clasArCondicionado(20, 'LG', 'LG20T', 'split');
+    $ac1 = new ArCondicionado(20, 'LG', 'LG20T', 'split');
     
-    $ac1->Diminuir();    
+    echo $ac1->diminuirTemperatura(); 
     ?>
 </body>
 </html>
