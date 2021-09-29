@@ -12,8 +12,8 @@
         require 'class.php';
 
         $partida1 = new Partida('Zeus', 'Poseidon', true);
-        $time1 = new Time('Zeus', 'Belo Horizonte', 'B', 0, 0, 0, $partida1);
-        $time2 = new Time('Poseidon', 'Contagem', 'B', 0, 0, 0, $partida1);
+        $time1 = new Time('Zeus', 'Belo Horizonte', 'B', $partida1);
+        $time2 = new Time('Poseidon', 'Contagem', 'B', $partida1);
 
         echo "<div class='flex'>";
         echo '<pre>';

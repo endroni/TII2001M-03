@@ -8,13 +8,10 @@ class Time{
     private $empates;
     private $partida;
 
-    public function __construct($nome, $cidade, $serie, $vitorias, $derrotas, $empates, $partida){
+    public function __construct($nome, $cidade, $serie, $partida){
         $this->nome = $nome;
         $this->cidade = $cidade;
         $this->serie = $serie;
-        $this->vitorias += $vitorias;
-        $this->derrotas += $derrotas;
-        $this->empates += $empates;
         $this->partida = $partida;
     }
 
@@ -47,6 +44,9 @@ class Time{
     }
 
     public function getVitorias(){
+        if($this->vitorias == null){
+            $this->vitorias = 0;
+        }
         return $this->vitorias;
     }
 
