@@ -122,6 +122,7 @@ class Partida{
 
     public function marcarPartida($time1, $time2, $aprovacao){
         if($time1 != $time2 && $aprovacao === true){
+            $this->aprovada = true;
             echo "Partida marcada";
         }
         else
