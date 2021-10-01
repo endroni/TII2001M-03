@@ -88,7 +88,8 @@ class Conta{
         }
     }
     public function tarifaMensal(){
-    } 
+
+    }
 }
 
 class ContaCorrente extends Conta{
@@ -109,6 +110,10 @@ class ContaPoupanca extends Conta{
             echo "<p>Novo saldo R$ {$this->getSaldo()}</p>";
         }
     }
+}
+
+class ContaPoupaMaia extends ContaPoupanca{
+
 }
 
 class Titular{
