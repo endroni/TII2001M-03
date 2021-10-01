@@ -4,16 +4,14 @@ class Conta{
     protected $tipo;
     private $titular;
     protected $saldo;
-    private $status;
-    private $cttps;
+    private $status;    
 
-    public function __construct($n, $tip, $tit, $sa, $cttps){
+    public function Conta($n, $tip, $tit, $sa){
         $this->numconta = $n;
         $this->tipo = $tip;
         $this->titular = $tit;
         $this->saldo = $sa;
         $this->status = false; 
-        $this->cttps = $cttps;
     }
     
     public function getNumConta(){
@@ -43,12 +41,12 @@ class Conta{
         $this->status = $st;
     }
 
-    public function abrirConta(){
+    public function abrirConta($titular){
         if ($this->tipo === 'cp' && $this->saldo > 50){
             $this->setStatus(true);
             echo "<p>Conta Poupança aberta</p>";
         }if($this->tipo === 'cc'){
-            if($this->saldo >= 200 || !empty($this->cttps)){
+            if($this->saldo >= 200 || !empty($titular->cttps)){
                 $this->setStatus(true);
                 echo "<p>Conta Corrente aberta</p>";
             } else {
@@ -110,6 +108,37 @@ class ContaPoupanca extends Conta{
             $this->saldo = $this->saldo + ($this->saldo * 0.0049);
             echo "<p>Novo saldo R$ {$this->getSaldo()}</p>";
         }
+    }
+}
+
+class Titular{
+    public $nome;
+    public $sobrenome;
+    public $cttps;
+
+    public function Titular($n, $s, $t){
+        $this->nome = $n;
+        $this->sobrenome = $s;
+        $this->cttps = $t;
+    }
+
+    public function getNome(){
+        return $this->nome;
+    }
+    public function setNome($n){
+        $this->nome = $n;
+    }
+    public function getSobrenome(){
+        return $this->sobrenome;
+    }
+    public function setSobrenome($s){
+        $this->sobrenome = $s;
+    }
+    public function getCttps(){
+        return $this->cttps;
+    }
+    public function setCttps($ct){
+        $this->cttps = $ct;
     }
 }
 

@@ -9,12 +9,14 @@
 <body>
     <?php
         require_once 'conta.php';
+        $t[0] = new Titular('João', 'Paulo', null);
+        $t[1] = new Titular('Pedro', 'Lajes', null );
 
-        $c1 = new Conta(1, 'cp', 'João', 55, null);
+        $c1 = new Conta(1, 'cp', 'João', 55);
         // $c1->abrirConta();
 
-        $c2 = new ContaPoupanca(2, 'cp', 'Pedro', 500, null);
-        $c2->abrirConta();
+        $c2 = new ContaPoupanca(2, 'cc', $t[0], 200);
+        $c2->abrirConta($t[0]);
         //$c2->encerrarConta();
         //$c2->depositar(500);
         
